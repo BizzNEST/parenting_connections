@@ -26,3 +26,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observeGTranslate();
 });
+
+// Before submitting the form, remove empty fields from the query parameters
+document.querySelector("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  // Get all non-empty values
+  const formData = new FormData(this);
+  const params = new URLSearchParams();
+
+  formData.forEach((value, key) => {
+    if (value.trim() !== "") {
+      params.append(key, value);
+    }
+  });
+
+  // Redirect with clean parameters
+  const queryString = params.toString();
+  const url = `${window.location.pathname}${queryString ? "?" + queryString : ""}`;
+  window.location.href = url;
+});
+
+// Clear the form and redirect to /doula-hub without any query parameters
+function clearFilters() {
+  event.preventDefault();
+  window.location.href = window.location.pathname;
+}
