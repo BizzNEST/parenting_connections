@@ -5,8 +5,7 @@ function divi_child_enqueue_scripts()
   wp_enqueue_style('divi-child-child-css', get_stylesheet_uri());
   wp_enqueue_style('divi-child-doula-cards-css', get_stylesheet_directory_uri() . '/css/doula_cards.css');
   wp_enqueue_style('divi-child-filter-search-css', get_stylesheet_directory_uri() . '/css/filter_search.css');
-  wp_enqueue_style( 'font-awesome', get_template_directory_uri().'css/font-awesome.min.css' );
-
+  wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
   wp_enqueue_script(
     'divi-child-scripts',
     get_stylesheet_directory_uri() . '/scripts.js',
