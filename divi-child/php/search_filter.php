@@ -122,3 +122,6 @@ $insurance = isset($_GET['insurance']) ? $_GET['insurance'] : '';
    
     
   </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay"></div>
