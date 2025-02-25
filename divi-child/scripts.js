@@ -55,38 +55,33 @@ function clearFilters() {
   window.location.href = window.location.pathname;
 }
 
-document
-  .getElementById("filter-btn")
-  .addEventListener("click", function (event) {
-    //alert("button clicked");
-    const modal = document.getElementById("edit-modal-content");
-    //const overlay = document.getElementById("modal-overlay");
+const filterButton = document.getElementById("filter-btn");
+const modal = document.getElementById("edit-modal-content");
+const closeModal = document.getElementsByClassName("edit-close")[0];
+const submitButton = document.getElementById("submit-modal");
 
-    //display the modal
-    //overlay.style.display = "block";
-    //overlay.style.backgroundColor = "pink";
+filterButton.addEventListener("click", (event) => {
+  //stops triggering event listeners on parent elements
+  event.stopPropagation();
+
+  if (modal.style.display === "block") {
+    modal.style.display = "none";
+  } else {
     modal.style.display = "block";
+  }
 
-    // Get the <span> element that closes the modal
-    const span = document.getElementsByClassName("edit-close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
+  // When the user clicks anywhere outside of the modal, close it
+  document.addEventListener("click", function (event) {
+    if (!modal.contains(event.target)) {
       modal.style.display = "none";
-      //overlay.style.backgroundColor = "transparent";
-    };
-
-    // When the user clicks anywhere outside of the modal, close it
-
-    /*window.addEventListener("click", function (event) {
-      if (modal.style.display === "block" && event.target !== modal) {
-        modal.style.display = "none";
-        //overlay.style.backgroundColor = "transparent";
-      }
-    });*/
-
-    document.getElementById("submit-modal").addEventListener("click", () => {
-      modal.style.display = "none";
-      //overlay.style.backgroundColor = "transparent";
-    });
+    }
   });
+});
+
+closeModal.onclick = function () {
+  modal.style.display = "none";
+};
+
+submitButton.addEventListener("click", () => {
+  modal.style.display = "none";
+});
