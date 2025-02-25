@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function observeGTranslate() {
     // Find all language selector links excluding the main toggle
     const languageLinks = document.querySelectorAll(
-      "a.glink.nturl:not(.notranslate)",
+      "a.glink.nturl:not(.notranslate)"
     );
 
     if (languageLinks.length > 0) {
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", function () {
           console.log(
             "Language link clicked:",
-            this.getAttribute("data-gt-lang"),
+            this.getAttribute("data-gt-lang")
           );
 
           // Make sure we give GTranslate time to translate
@@ -43,7 +43,9 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
   // Redirect with clean parameters
   const queryString = params.toString();
-  const url = `${window.location.pathname}${queryString ? "?" + queryString : ""}`;
+  const url = `${window.location.pathname}${
+    queryString ? "?" + queryString : ""
+  }`;
   window.location.href = url;
 });
 

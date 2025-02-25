@@ -30,6 +30,7 @@ $insurance = isset($_GET['insurance']) ? $_GET['insurance'] : '';
 
   <div class="filter-btns-container">
     <button class="search-filter-btn">
+    <i class="fa-solid fa-filter"></i>
       Filter
     </button>
     <form action="doula-hub" class="filter-container">
