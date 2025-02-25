@@ -1,3 +1,13 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
 #edit-modal-header {
   color: black;
   font-weight: bold;
@@ -88,13 +98,12 @@
   font-size: 16px;
 }
 
-.search-filter-btn:hover,
-.search-filter-btn:focus {
+.search-filter-btn:hover {
   background-color: rgba(67, 89, 85, 0.85) !important;
 }
 
 .search-filter-btn:focus {
-  outline: blue 1px solid;
+  outline: #bf8969 1px solid;
 }
 
 .filter-container {
@@ -136,9 +145,10 @@
 }
 
 .edit-modal-content {
+  display: none; /* Hidden by default */
   position: absolute;
   padding: 20px;
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   width: 100%; /* Full width */
   overflow: auto; /* Enable scroll if needed */
   background-color: white; /* Fallback color */
