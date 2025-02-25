@@ -31,6 +31,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 6px;
+  margin-bottom: 8px;
   width: 100%;
   grid-template-areas: "filter search" "staff staff";
 }
