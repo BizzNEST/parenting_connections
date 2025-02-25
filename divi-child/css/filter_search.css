@@ -126,9 +126,6 @@
 }
 
 .filter-btns-container {
-  /*display: grid;
-			 gap: 8px;
-    	grid-template-columns: 1fr 1fr;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -141,6 +138,10 @@
 
 .filter-btns-container > button {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .edit-modal-content {
@@ -152,8 +153,6 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: white; /* Fallback color */
   border-radius: 5px;
-  /*width: fit-content; Could be more or less, depending on screen size */
-
   min-height: max-content; /* Ensure the modal itself has a max height */
   overflow-y: auto; /* Enable vertical scrolling for the modal */
 }
@@ -198,11 +197,34 @@
   .search-container {
     display: flex;
     flex-direction: column;
+    padding: 0px;
   }
 
   .filter-search-container {
-    grid-template-areas: "search" "filter" "staff";
-    gap: 8px;
+    grid-template-areas: "search" "filter";
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .search-container {
+    background-color: transparent;
+  }
+
+  .search-label {
+    color: black;
+  }
+
+  .search-input-container {
+    position: relative;
+    grid-area: search;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .filter-btns-container {
+    background-color: transparent;
+    padding: 0px;
   }
 
   .filter-container {
