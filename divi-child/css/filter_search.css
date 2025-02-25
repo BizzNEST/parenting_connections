@@ -117,9 +117,6 @@
 }
 
 .filter-btns-container {
-  /*display: grid;
-			 gap: 8px;
-    	grid-template-columns: 1fr 1fr;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -132,7 +129,6 @@
 
 .filter-btns-container > button {
   width: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,7 +136,6 @@
 }
 
 .edit-modal-content {
-  /*display: none;  Hidden by default */
   position: absolute;
   padding: 20px;
   z-index: 1; /* Sit on top */
@@ -148,8 +143,6 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: white; /* Fallback color */
   border-radius: 5px;
-  /*width: fit-content; Could be more or less, depending on screen size */
-
   min-height: max-content; /* Ensure the modal itself has a max height */
   overflow-y: auto; /* Enable vertical scrolling for the modal */
 }
@@ -201,7 +194,6 @@
     grid-template-areas: "search" "filter";
     grid-template-columns: 1fr;
     gap: 17px;
-    background-color: transparent;
   }
 
   .search-container {
