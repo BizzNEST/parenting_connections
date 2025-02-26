@@ -29,7 +29,7 @@ $insurance = isset($_GET['insurance']) ? $_GET['insurance'] : '';
 
  
   <div class="filter-btns-container">
-    <button class="search-filter-btn">
+    <button class="search-filter-btn" id="filter-btn">
     <i class="fa-solid fa-filter"></i>
       Filter
     </button>
