@@ -65,9 +65,6 @@ foreach ($categories as $category) {
           </div>
           <div class="title-clear-button">
             <p id="edit-modal-header">Filter By</p>
-            <button id="clear-button" class="clear-button">
-              Clear All
-            </button>
           </div>
 
           <?php foreach ($parent_categories as $parent): ?>
