@@ -40,7 +40,7 @@ foreach ($categories as $category) {
         name="search"
         value="<?php echo $search ?: "" ?>" />
 
-      <button class="search-filter-btn" id="clear-button">
+      <button class="search-filter-btn clear-button" id="clear-button">
         Clear
       </button>
 

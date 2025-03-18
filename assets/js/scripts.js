@@ -49,16 +49,14 @@ document.querySelector("form").addEventListener("submit", function (event) {
   window.location.href = url;
 });
 
-// Clear the form and redirect to remove all filters
 function clearFilters(event) {
   event.preventDefault();
 
-  // Reset the form to clear all selections
-  document.querySelector("form").reset();
+  document.querySelectorAll("form").forEach((form) => form.reset());
 
-  // Redirect to the same page without query parameters
   window.location.href = window.location.pathname;
 }
 
-// Attach event listener to the "Clear All" button
-document.getElementById("clear-button").addEventListener("click", clearFilters);
+document.querySelectorAll(".clear-button").forEach((button) => {
+  button.addEventListener("click", clearFilters);
+});
