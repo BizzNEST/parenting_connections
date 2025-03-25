@@ -26,13 +26,13 @@ foreach ($categories as $category) {
 
 ?>
 
-<div class="filter-search-container">
+<div class="filter-search-container" id="filter">
   <div class="search-container">
     <label class="search-label">
       Search by Name
     </label>
 
-    <form action="/doula-hub" class="search-input-container" method="get">
+    <form action="doula-hub/#filter" class="search-input-container" method="get">
       <input
         type="text"
         placeholder="Enter staff name..."
@@ -56,7 +56,7 @@ foreach ($categories as $category) {
       Filter
     </button>
 
-    <form action="doula-hub" class="filter-container">
+    <form action="doula-hub/#filter" class="filter-container" method="get">
       <div class="edit-modal-content" id="edit-modal-content">
 
         <div class="modal-header">
